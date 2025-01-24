@@ -1,0 +1,17 @@
+{
+  "name": "mon-premier-site",
+  "version": "1.0.0",
+  "description": "Mon premier site web avec React.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "author": "XxGhostxX",
+  "license": "ISC"
+}
