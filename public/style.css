@@ -1,34 +1,87 @@
+/* Corps de la page */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #141e30, #243b55);
-  color: #fff;
+  background: linear-gradient(to bottom, #141e30, #243b55); /* Dégradé de fond */
+  color: #fff; /* Texte blanc */
+  line-height: 1.6; /* Espacement de lignes pour une meilleure lisibilité */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
+/* En-tête */
 header {
   text-align: center;
   padding: 2rem;
-  background-color: #333;
+  background-color: #333; /* Fond sombre pour l'en-tête */
+  border-bottom: 4px solid #00f2fe; /* Légère bordure en bleu */
 }
 
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Section principale (Hero) */
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 4rem 1rem; /* Espacement plus large pour la section */
+  background-image: url('https://via.placeholder.com/1500x800'); /* Remplacer par ton image de fond */
+  background-size: cover; /* Recouvrir toute la section */
+  background-position: center; /* Centrer l'image */
+  background-attachment: fixed; /* Effet Parallax */
+  animation: fadeIn 2s ease-out; /* Animation d'apparition */
 }
 
-a {
-  color: #00f2fe;
+.hero h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.hero ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hero li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.hero a {
+  color: #00f2fe; /* Bleu fluorescent */
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease; /* Transition fluide de couleur */
 }
 
-a:hover {
-  text-decoration: underline;
+.hero a:hover {
+  text-decoration: underline; /* Soulignement au survol */
+  color: #3498db; /* Changement de couleur au survol */
 }
 
+/* Pied de page */
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #222;
+  background-color: #222; /* Fond sombre pour le pied de page */
+  border-top: 4px solid #00f2fe; /* Bordure bleue pour séparer */
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
