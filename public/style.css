@@ -1,37 +1,98 @@
 /* Corps de la page */
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #141e30, #243b55); /* Dégradé de fond */
-  color: #fff; /* Texte blanc */
-  line-height: 1.6; /* Espacement de lignes pour une meilleure lisibilité */
-  overflow-x: hidden; /* Empêche le défilement horizontal */
-  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(45deg, #ff1e56, #ff771e, #ff1e56, #1effbf);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
 }
 
-/* Arrière-plan animé */
-@keyframes backgroundMove {
+/* Animation du dégradé */
+@keyframes gradientAnimation {
   0% {
-    background-position: 0 0;
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 1000px 1000px; /* Déplacement de l'image en diagonale */
+    background-position: 0% 50%;
   }
 }
 
-body {
-  background: url('https://via.placeholder.com/1500x1500') repeat; /* Remplacer par ton image */
-  background-size: 200% 200%;
-  animation: backgroundMove 15s linear infinite; /* Animation de l'arrière-plan */
+/* Formes géométriques en mouvement */
+@keyframes shapeMovement {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(50%, 50%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Forme 1 - Cercle animé */
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: shapeMovement 10s linear infinite;
+  z-index: 1;
+}
+
+/* Forme 2 - Carré animé */
+.square {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 255, 255, 0.3);
+  animation: shapeMovement 8s linear infinite;
+  z-index: 1;
+}
+
+/* Forme 3 - Triangle animé */
+.triangle {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid rgba(255, 255, 0, 0.3);
+  animation: shapeMovement 12s linear infinite;
+  z-index: 1;
+}
+
+/* Forme 4 - Hexagone animé */
+.hexagon {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 255, 0, 0.3);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: shapeMovement 14s linear infinite;
+  z-index: 1;
 }
 
 /* En-tête */
 header {
   text-align: center;
   padding: 2rem;
-  background-color: rgba(51, 51, 51, 0.8); /* Fond sombre avec transparence */
-  border-bottom: 4px solid #00f2fe; /* Légère bordure en bleu */
+  background-color: rgba(51, 51, 51, 0.8);
+  border-bottom: 4px solid #00f2fe;
 }
 
 header h1 {
@@ -46,62 +107,30 @@ header p {
 /* Section principale (Hero) */
 .hero {
   text-align: center;
-  padding: 4rem 1rem; /* Espacement plus large pour la section */
-  background-image: url('https://via.placeholder.com/1500x800'); /* Remplacer par ton image de fond */
-  background-size: cover; /* Recouvrir toute la section */
-  background-position: center; /* Centrer l'image */
-  background-attachment: fixed; /* Effet Parallax */
+  padding: 4rem 1rem;
   position: relative;
-  overflow: hidden;
+  z-index: 2;
 }
 
-/* Animation de texte diagonal */
-@keyframes textDiagonalMove {
-  0% {
-    transform: translate(-100vw, -100vh);
-  }
-  100% {
-    transform: translate(100vw, 100vh);
-  }
-}
-
-/* Texte animé dans la section hero */
-.hero h2 {
-  font-size: 3rem;
-  color: #fff;
-  animation: textDiagonalMove 10s linear infinite; /* Animation en diagonale */
-  display: inline-block;
-}
-
-.hero ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.hero li {
-  font-size: 1.2rem;
-  margin: 1rem 0;
-  animation: textDiagonalMove 12s linear infinite; /* Animation pour chaque élément de la liste */
-}
-
+/* Liens */
 .hero a {
-  color: #00f2fe; /* Bleu fluorescent */
+  color: #00f2fe;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease; /* Transition fluide de couleur */
+  transition: color 0.3s ease;
 }
 
 .hero a:hover {
-  text-decoration: underline; /* Soulignement au survol */
-  color: #3498db; /* Changement de couleur au survol */
+  text-decoration: underline;
+  color: #3498db;
 }
 
 /* Pied de page */
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #222; /* Fond sombre pour le pied de page */
-  border-top: 4px solid #00f2fe; /* Bordure bleue pour séparer */
+  background-color: #222;
+  border-top: 4px solid #00f2fe;
 }
 
 footer p {
@@ -116,4 +145,4 @@ footer p {
   100% {
     opacity: 1;
   }
-                         }
+}
