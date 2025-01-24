@@ -7,13 +7,30 @@ body {
   color: #fff; /* Texte blanc */
   line-height: 1.6; /* Espacement de lignes pour une meilleure lisibilité */
   overflow-x: hidden; /* Empêche le défilement horizontal */
+  position: relative;
+}
+
+/* Arrière-plan animé */
+@keyframes backgroundMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px; /* Déplacement de l'image en diagonale */
+  }
+}
+
+body {
+  background: url('https://via.placeholder.com/1500x1500') repeat; /* Remplacer par ton image */
+  background-size: 200% 200%;
+  animation: backgroundMove 15s linear infinite; /* Animation de l'arrière-plan */
 }
 
 /* En-tête */
 header {
   text-align: center;
   padding: 2rem;
-  background-color: #333; /* Fond sombre pour l'en-tête */
+  background-color: rgba(51, 51, 51, 0.8); /* Fond sombre avec transparence */
   border-bottom: 4px solid #00f2fe; /* Légère bordure en bleu */
 }
 
@@ -34,12 +51,26 @@ header p {
   background-size: cover; /* Recouvrir toute la section */
   background-position: center; /* Centrer l'image */
   background-attachment: fixed; /* Effet Parallax */
-  animation: fadeIn 2s ease-out; /* Animation d'apparition */
+  position: relative;
+  overflow: hidden;
 }
 
+/* Animation de texte diagonal */
+@keyframes textDiagonalMove {
+  0% {
+    transform: translate(-100vw, -100vh);
+  }
+  100% {
+    transform: translate(100vw, 100vh);
+  }
+}
+
+/* Texte animé dans la section hero */
 .hero h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #fff;
+  animation: textDiagonalMove 10s linear infinite; /* Animation en diagonale */
+  display: inline-block;
 }
 
 .hero ul {
@@ -50,6 +81,7 @@ header p {
 .hero li {
   font-size: 1.2rem;
   margin: 1rem 0;
+  animation: textDiagonalMove 12s linear infinite; /* Animation pour chaque élément de la liste */
 }
 
 .hero a {
@@ -84,4 +116,4 @@ footer p {
   100% {
     opacity: 1;
   }
-}
+                         }
