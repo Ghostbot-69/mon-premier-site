@@ -1,105 +1,152 @@
-/* Dégradé bleu par défaut */
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(120deg, #4b0082, #0000ff); /* Dégradé bleu */
-  overflow: hidden;
-  color: white;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
 }
 
-/* Dégradé pour la section .hero sur chaque page */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.content {
   text-align: center;
-}
-
-.hero .content {
-  max-width: 800px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* Ombre légère pour la lisibilité */
-  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
 }
 
-h1, p {
-  margin: 10px 0;
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4267B2; /* Facebook Blue */
+  background-color: #4CAF50;
   color: white;
+  padding: 12px 24px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #365899;
+  background-color: #45a049;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Dégradé spécifique pour chaque page */
-.index .hero {
-  background: linear-gradient(120deg, #0000ff, #4b0082); /* Bleu à indigo */
-}
-
-.about .hero {
-  background: linear-gradient(120deg, #0000ff, #008000); /* Bleu à vert */
-}
-
-.contact .hero {
-  background: linear-gradient(120deg, #0000ff, #ffa500); /* Bleu à orange */
-}
-
-.features .hero {
-  background: linear-gradient(120deg, #0000ff, #800080); /* Bleu à violet */
-}
-
-/* Style pour le formulaire de contact */
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-form input, form textarea {
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  font-size: 1em;
 }
 
-form button {
-  padding: 10px 20px;
-  background-color: #008CBA;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
 }
 
-form button:hover {
-  background-color: #005f73;
+label {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  display: block;
 }
 
-.nav-links {
-  margin-top: 20px;
+textarea {
+  resize: vertical;
+  min-height: 150px;
 }
 
 .nav-links a {
-  margin: 0 15px;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.cookie-download a {
+  display: inline-block;
+  margin: 10px;
+}
+
+.cookie-download button {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.cookie-download button:hover {
+  background-color: #1976D2;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #000;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  z-index: 100;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 99;
+}
+
+.download-box {
+  margin-top: 20px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.download-box a {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.download-box a:hover {
+  background-color: #45a049;
 }
