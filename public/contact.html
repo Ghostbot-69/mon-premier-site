@@ -1,34 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Auto-Ghost-Bot</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Contactez-moi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #4267B2; /* Facebook Blue */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #365899;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    button:active {
+      transform: scale(1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 <body>
-  <div class="hero">
-    <div class="content">
-      <h1>Contactez-nous</h1>
-      <form id="contactForm">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" required>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
+  <div class="container">
+    <h1>Pour me contacter, c'est sur Facebook !</h1>
+    <p>Cliquer sur le bouton ci-dessous pour envoyer un message.</p>
 
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Envoyer</button>
-      </form>
-      <div class="nav-links">
-        <a href="index.html">Retour à l'accueil</a>
-        <a href="about.html">À propos</a>
-        <a href="features.html">Fonctionnalités</a>
-      </div>
-    </div>
+    <a href="https://www.facebook.com/8Xx.GHOST.xX8" target="_blank">
+      <button>Contactez-moi sur Facebook</button>
+    </a>
   </div>
+
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
